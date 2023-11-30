@@ -9,21 +9,38 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="icon-arrow">
-        <h1>Czcionka typu: Black</h1>
+    <div id="pages">
+        <section id="home">
+          <div class="home__wrapper container"></div>
+        </section>
+        <section id="products">
+          <div id="product-list" class="products__wrapper container"></div>
+        </section>
+        <section id="contact">
+          <div class="contact__wrapper container"></div>
+        </section>
     </div>
-    <div class="icon-arrow">
-        <h2>Czcionka typu: Semibold</h2>
-    </div>
-    <div class="icon-arrow">
-        <h3>Czcionka typu: SemiboldItalic</h3>
-    </div>
-    <div class="icon-arrow">
-        <h4>Czcionka typu: Bold</h4>
-    </div>
-    <div class="icon-arrow">
-        <h5>Czcionka typu: Regular</h5>
-    </div>
+    <script id="template-coffe-product" type="text/x-handlebars-template">
+        <article class="product">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="product__title">{{ id }} {{ title }}</h1>
+              <div class="product__description">
+                <p>{{ description }}</p>
+              </div>
+              <ul class="product__properties">
+                <li>Roasting: <span>{{ roasting }}</span></li>
+                <li>Intensity: <span>{{ intensity }}</span></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="product__image">
+                {{{  image }}}
+              </div>
+            </div>
+          </div>
+        </article>
+      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="js/app.js" type="module"></script>
 </body>

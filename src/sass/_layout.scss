@@ -11,3 +11,15 @@ It could be, for example, a class giving some small padding at the top and botto
 .page {
     padding: 15px 0;
 }
+
+/* Bootstrap */
+.row {
+    margin: 0 auto;
+    padding: 20px 0;
+    flex-wrap: nowrap;  
+  }
+  
+  .col-md-6 {
+    padding: 0px;
+    object-fit: cover;
+  }

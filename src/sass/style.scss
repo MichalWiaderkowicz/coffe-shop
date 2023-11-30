@@ -12,8 +12,11 @@
 // variables
 @import "variables";
 
-// common styles
+// styles
 @import "layout";
 @import "global";
 @import "typography";
 @import "icons";
+
+// pages
+@import "pages/product";

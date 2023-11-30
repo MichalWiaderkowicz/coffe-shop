@@ -15,5 +15,5 @@ export const settings = {
 };
 
 export const templates = {
-  coffeProduct: Handlebars.compile(document.querySelector(select.templateOf.coffeProductProduct).innerHTML),
+  coffeProduct: Handlebars.compile(document.querySelector(select.templateOf.coffeProduct).innerHTML),
 };
