@@ -1,26 +1,29 @@
+/* typography.scss.
+See any repeating headings or text styles?
+It is worth preparing appropriate classes. */
 body {
   h1 {
-    font-family: 'Source Serif Pro Black';
+    font-family: $font-black;
     font-size: 50px;
   }
 
   h2 {
-    font-family: 'Source Serif Pro Semibold';
+    font-family: $font-semibold;
     font-size: 50px;
   }
 
   h3 {
-    font-family: 'Source Serif Pro Semibold Italic';
+    font-family: $font-italic;
     font-size: 50px;
   }
 
   h4 {
-    font-family: 'Source Serif Pro Bold';
+    font-family: $font-bold;
     font-size: 50px;
   }
 
   h5 {
-    font-family: 'Source Serif Pro Regular';
+    font-family: $font-regular;
     font-size: 50px;
   }
 }
