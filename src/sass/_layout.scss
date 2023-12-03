@@ -1,25 +1,26 @@
 /* what classes for “layout” (_layout.scss) may be useful to us.
 The .container class will probably come in handy */
 .container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1164px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* maybe it would be a good idea to prepare a .page class for the "subpage" style?
 It could be, for example, a class giving some small padding at the top and bottom of the element. */
 .page {
-    padding: 15px 0;
+  padding: 10px 0;
 }
 
 /* Bootstrap */
 .row {
-    margin: 0 auto;
-    padding: 20px 0;
-    flex-wrap: nowrap;  
-  }
+  border: 2px solid black;
+  margin: 0 auto;
+  flex-wrap: nowrap;  
+}
   
-  .col-md-6 {
-    padding: 0px;
-    object-fit: cover;
-  }
+.col-md-6 {
+  border: 2px solid red;
+  padding: 0px;
+  object-fit: cover;
+}
