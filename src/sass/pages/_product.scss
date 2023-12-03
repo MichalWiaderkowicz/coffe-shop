@@ -9,6 +9,7 @@
   margin-bottom: 150px;
   text-align: center;
   position: relative;
+
   &::after {
     content: "";
     background-color: $color-main;
@@ -40,6 +41,7 @@
     letter-spacing: 3px;
     font-family: $font-bold;
     color: black;
+
     &::after {
       content: "";
       background-color: $color-main;
@@ -59,6 +61,7 @@
     letter-spacing: 0px;
     font-family: $font-regular;
     color: $color-gray;
+
     p {
       margin: 0;
     }
@@ -66,7 +69,6 @@
   
   &__taste {
     font-size: 20px;
-    width: 442px;
     height: 154px;
     line-height: 30px;
     letter-spacing: 1px;
