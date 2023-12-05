@@ -74,7 +74,23 @@
 }
 
 .product:nth-of-type(2n) {
-
+  .row {
+    flex-direction: row-reverse;
+  }
+  .product__title {
+    padding-left: 80px;
+    &::after {
+      margin-left: 80px;
+      width: 110px;
+      height: 5px;
+    }
+  }
+  .product__description {
+    padding-left: 80px;
+  }
+  .product__taste {
+    padding-left: 80px;
+  }
   .product__image {
     float: left;
   }

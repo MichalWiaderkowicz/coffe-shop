@@ -1,8 +1,30 @@
-.thsirt__about {
+.tshirt__about {
     background-image: url('../images/about-us.jpg');
     background-size: cover;
     background-position: center;
     height: 850px;
+}
+.home {
+    &__about {
+        padding: 45px 0;
+    }
+}
+.about-description {
+    position: relative;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%);
+    font-size: 38px;
+    font-family: $font-italic;
+    width: 970px;
+    height: 430px;
+    p {
+        padding-right: 135px;
+    }
+    p:nth-of-type(3) {
+        padding: 0;
+        text-align: right;
+    }
 }
 .footer {
     font-family: $font-semibold;
