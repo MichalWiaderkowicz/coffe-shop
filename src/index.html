@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section class="menu">
+    <section class="tshirt tshirt__menu">
       <nav class="navbar container">
         <div class="navbar__type">
           <a class="navbar__face"><p>El Tigre</p><p>Wenezuela coffe baens</p></a>
@@ -40,11 +40,19 @@
       </header>
     </section>
     <div id="pages">
-        <section id="home">
-          <div class="home__wrapper container"></div>
+        <section id="home" class="page">
+          <div class="home__wrapper container">
+            <h1 class="gold__header">Products</h1>
+            <div id="product-list"></div>
+          </div>
+          <div class="home__about container tshirt tshirt__about">
+            <h1 class="gold__header">About us</h1>
+          </div>
+          <footer class="footer">
+            <p>&copy; 2023 EL TIGRE inc.</p>
+          </footer>
         </section>
         <section id="products">
-          <h1 class="products__header container">Products</h1>
           <div id="product-list" class="products__wrapper container"></div>
         </section>
         <section id="contact">

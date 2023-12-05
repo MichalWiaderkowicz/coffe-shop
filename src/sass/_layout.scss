@@ -14,13 +14,11 @@ It could be, for example, a class giving some small padding at the top and botto
 
 /* Bootstrap */
 .row {
-  border: 2px solid black;
   margin: 0 auto;
   flex-wrap: nowrap;  
 }
   
 .col-md-6 {
-  border: 2px solid red;
   padding: 0px;
   object-fit: cover;
 }

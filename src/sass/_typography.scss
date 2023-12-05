@@ -1,29 +1,45 @@
 /* typography.scss.
 See any repeating headings or text styles?
 It is worth preparing appropriate classes. */
-body {
-  h1 {
-    font-family: $font-black;
-    font-size: 50px;
+.tshirt {
+  position: relative;
+  color: $color-light;
+  max-width: 1920px;
+  padding: 0;
+  margin: o auto;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background-color: $color-dark;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+  }
+}
+.gold__header {
+  position: relative;
+  font-family: $font-bold;
+  font-size: 74px;
+  line-height: 95px;
+  letter-spacing: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-main;
+  margin-bottom: 150px;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 750px;
+    height: 5px;
+    top: 130px;
+    left: 50%;
+    background-color: $color-dark;
+    opacity: 0.5;
+    transform: translate(-50%, 0%);
   }
 
-  h2 {
-    font-family: $font-semibold;
-    font-size: 50px;
-  }
 
-  h3 {
-    font-family: $font-italic;
-    font-size: 50px;
-  }
-
-  h4 {
-    font-family: $font-bold;
-    font-size: 50px;
-  }
-
-  h5 {
-    font-family: $font-regular;
-    font-size: 50px;
-  }
 }
