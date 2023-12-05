@@ -19,3 +19,12 @@
   font-family: 'Source Serif Pro Regular';
   src: url('../vendor/fonts/source-sans-pro.regular.ttf') format('truetype');
 }
+//pages
+#pages {
+  > * {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
