@@ -81,7 +81,7 @@ const app = {
     }
     /* assign the active class to the selected link, remove it from the others */
     for(let link of thisApp.navigationLinks) {
-      link.classList.toggle(classNames.navigation.active,link.getAttribute('href') == '#' + pageId);
+      link.classList.toggle(classNames.navigation.active, link.getAttribute('href') == '#' + pageId);
 
     }
   },

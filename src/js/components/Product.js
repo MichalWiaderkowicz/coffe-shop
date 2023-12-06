@@ -5,8 +5,8 @@ class Product {
   constructor(id, data){
     const thisProduct  = this;
 
-    thisProduct.id = id;        //!product id from data downloaded from the server!
-    thisProduct.data = data;    //!simply product data!
+    thisProduct.id = id;
+    thisProduct.data = data;
 
     thisProduct.renderInCoffe();
   }
@@ -20,12 +20,23 @@ class Product {
 
     /* create element using utils.createElementFromHTML */
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+    console.log('every coffe ', thisProduct.element);
+
+    /* create a t-shirt for this element */
+    const tshirt = thisProduct.element.cloneNode(true);
+    console.log('tshirt', tshirt);
 
     /* find coffe container */
-    thisProduct.coffeContainer = document.querySelector(select.containerOf.coffe);
+    thisProduct.coffeContainer = document.querySelectorAll(select.containerOf.coffe);
+    console.log('coffeContainer', thisProduct.coffeContainer);
 
-    /* add element to page */
-    thisProduct.coffeContainer.appendChild(thisProduct.element); //!add child to new html element!
+    thisProduct.homeCoffePage = thisProduct.coffeContainer[0];
+    thisProduct.productCoffePage = thisProduct.coffeContainer[1];
+
+    thisProduct.homeCoffePage.appendChild(thisProduct.element);
+    thisProduct.productCoffePage.appendChild(tshirt);
+
+
   }
 }
 
