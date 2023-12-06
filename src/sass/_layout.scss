@@ -22,3 +22,23 @@ It could be, for example, a class giving some small padding at the top and botto
   padding: 0px;
   object-fit: cover;
 }
+@media (min-width: 768px) and (max-width: 1204px) {
+  .footer {
+    padding: 0;
+  }
+}
+
+@media (max-width:767px){
+  .container {
+    max-width: auto;
+  }
+
+  .footer {
+    scale: 0.7;
+    padding: 0;
+
+    p{
+      margin : 0 auto;
+    }
+  }
+}

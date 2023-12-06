@@ -5,6 +5,21 @@
   width: 1157px;
   height: 422px;
 
+  .row {
+    margin: 0 auto;
+    flex-wrap: nowrap;
+  }
+
+  .col-sm-6 {
+    padding: 0px;
+    object-fit: cover;
+  }
+
+  .col-xs-12 {
+    padding: 0px;
+    object-fit: cover;
+  }
+
   &__title {
     position: relative;
     margin: 0;
@@ -26,7 +41,7 @@
       left: 0px;
     }
   }
-    
+
   &__description {
     margin-left: 140px;
     width: 330px;
@@ -40,7 +55,7 @@
       margin: 0;
     }
   }
-  
+
   &__taste {
     font-size: 20px;
     height: 154px;
@@ -52,19 +67,18 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-  
+
     span {
       color: $color-main;
     }
-
   }
-  
+
   &__image {
     width: 553px;
     height: 422px;
     float: right;
   }
-  
+
   img {
     width: 100%;
     height: 100%;
@@ -77,21 +91,90 @@
   .row {
     flex-direction: row-reverse;
   }
+
   .product__title {
     padding-left: 80px;
+
     &::after {
       margin-left: 80px;
       width: 110px;
       height: 5px;
     }
   }
+
   .product__description {
     padding-left: 80px;
   }
+
   .product__taste {
     padding-left: 80px;
   }
+
   .product__image {
     float: left;
+  }
+}
+@media (max-width:767px) {
+  .product {
+    max-width: 280px;
+    height: auto;
+    padding-bottom: 30px;
+
+    .row {
+      flex-direction: column;
+    }
+
+    &__description {
+      width: 250px;
+      padding: 0 10px;
+      padding-bottom: 15px;
+
+      &::after {
+        width: 30px;
+        height: 1.5px;
+        top: 27px;
+      }
+    }
+
+    &__taste {
+      margin-top: 20px;
+      margin-left: 8px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &__image {
+      width: 280px;
+      height: 200px;
+      float: none;
+    }
+  }
+
+  .product:nth-of-type(2n) {
+    .row {
+      flex-direction: column;
+    }
+
+    .product__title {
+      padding-left: 20px;
+
+      &::after {
+        width: 30px;
+        height: 1.5px;
+        top: 27px;
+      }
+    }
+
+    .product__description {
+      padding-left: 20px;
+    }
+
+    .product__taste {
+      padding-left: 20px;
+    }
+
+    .product__image {
+      float: left;
+    }
   }
 }

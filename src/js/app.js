@@ -51,7 +51,6 @@ const app = {
         break;
       }
     }
-    console.log('pageHash:', pageHash);
     /* activate subpage with pageHash */
     thisApp.activatePage(pageHash);
 

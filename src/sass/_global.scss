@@ -24,6 +24,7 @@
   > * {
     display: none;
   }
+
   > .active {
     display: block;
   }
@@ -35,6 +36,7 @@
   max-width: 1920px;
   padding: 0;
   margin: o auto;
+
   &::before {
     position: absolute;
     content: "";

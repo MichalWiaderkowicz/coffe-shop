@@ -10,24 +10,28 @@
 </head>
 <body>
     <section class="tshirt tshirt__menu">
-      <nav class="navbar container">
-        <div class="navbar__type">
-          <a class="navbar__face"><p>El Tigre</p><p>Wenezuela coffe baens</p></a>
+      <div class="tshirt__absolute">
+        <div class="container">
+          <nav class="navbar">
+            <div class="navbar__type">
+              <a class="navbar__face"><p>El Tigre</p><p>Wenezuela coffe baens</p></a>
+            </div>
+            <div class="navbar__navigation">
+              <ul>
+                <li>
+                  <a class="navigation__link" href="#home">Home</a>
+                </li>
+                <li>
+                  <a class="navigation__link" href="#products">Products</a>
+                </li>
+                <li>
+                  <a class="navigation__link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
-        <div class="navbar__navigation">
-          <ul>
-            <li>
-              <a class="navigation__link" href="#home">Home</a>
-            </li>
-            <li>
-              <a class="navigation__link" href="#products">Products</a>
-            </li>
-            <li>
-              <a class="navigation__link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      </div>
       <header class="header">
         <div class="header__title">
           <h1>HOME OF</h1>
@@ -65,9 +69,6 @@
           </footer>
         </section>
         <section id="contact" class="page">
-          <div class="contact__wrapper container"></div>
-        </section>
-        <section id="contact" class="page">
           <h1 class="gold__header">Contact us</h1>
           <div class="contact__wrapper container">
             <h4>Name</h4>
@@ -86,7 +87,7 @@
     <script id="template-coffe-product" type="text/x-handlebars-template">
         <article class="product">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-xs-12 col-sm-6">
               <h1 class="product__title">{{ id }} {{ title }}</h1>
               <div class="product__description">
                 <p>{{ description }}</p>
@@ -96,7 +97,7 @@
                 <li>Intensity: <span>{{ intensity }}</span></li>
               </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-xs-12 col-sm-6">
               <div class="product__image">
                 {{{  image }}}
               </div>
