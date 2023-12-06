@@ -43,7 +43,6 @@ const app = {
     thisApp.navigationLinks = document.querySelectorAll(select.navigation.links);
     /* use the id from the hash to determine the opening of the default page */
     const hashId = window.location.hash.replace('#/', '');
-    console.log('hashId:', hashId);
     /* check if the id matches the subpage name */
     let pageHash = thisApp.pages[0].id;
     for(let page of thisApp.pages) {
@@ -61,17 +60,32 @@ const app = {
       link.addEventListener('click', function(event){
         const clickedElement = this;
         event.preventDefault();
+
         /* clicking on the link retrieves the id from the href attribute */
         const id = clickedElement.getAttribute('href').replace('#', '');
 
         thisApp.activatePage(id);
+
         /* when activating the subpage, change the url hash */
         window.location.hash = '#/' + id;
       });
     }
   },
 
-  
+  activatePage: function(pageId) {
+    const thisApp = this;
+    
+    /* assign the active class to the selected subpage, remove it from the others */
+    for(let page of thisApp.pages) {
+      page.classList.toggle(classNames.pages.active, page.id == pageId);
+    }
+    /* assign the active class to the selected link, remove it from the others */
+    for(let link of thisApp.navigationLinks) {
+      link.classList.toggle(classNames.navigation.active,link.getAttribute('href') == '#' + pageId);
+
+    }
+  },
+
 };
 
 app.init();
