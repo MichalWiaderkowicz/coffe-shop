@@ -3,11 +3,11 @@ export const select = {
     coffeProduct: '#template-coffe-product',
   },
   containerOf: {
-    coffe: '#product-list',
+    coffe: '.product-list',
     pages: '#pages',
   },
   navigation: {
-    links: '.navigation__link, .navbar__face',
+    links: '.navigation__link',
   },
 };
 

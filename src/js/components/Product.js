@@ -36,6 +36,7 @@ class Product {
     thisProduct.homeCoffePage.appendChild(thisProduct.element);
     thisProduct.productCoffePage.appendChild(tshirt);
 
+    
 
   }
 }
