@@ -250,8 +250,8 @@
   }
 
   .navbar {
-    max-width: 95vw;
-    gap: 40px;
+    max-width: 90vw;
+    gap: 50px;
     height: 20px;
     padding: 0 10px;
     justify-content: space-between;
@@ -284,29 +284,34 @@
   }
 
   .header {
-    width: 310px;
+    width: 98vw;
     margin-top: 90px;
 
     &__title {
-      width: 310px;
-
+      //width: 310px;
+      position: relative;
+      text-align: center;
+      width: 98vw;
+      top: 100px;
       &::after {
-        width: 150px;
+        width: 60px;
         height: 3px;
         top: 60px;
       }
     }
 
     h1 {
-      font-size: 25px;
-      line-height: 25px;
-      letter-spacing: 6px;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 5px;
+      margin: 0 30px;
     }
 
     &__discover {
       margin-top: 100px;
       font-size: 8px;
       letter-spacing: 5px;
+      top: 120px;
     }
 
     .icon {
