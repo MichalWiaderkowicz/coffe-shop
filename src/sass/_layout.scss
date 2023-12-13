@@ -12,16 +12,7 @@ It could be, for example, a class giving some small padding at the top and botto
   padding: 10px 0;
 }
 
-/* Bootstrap */
-.row {
-  margin: 0 auto;
-  flex-wrap: nowrap;  
-}
-  
-.col-md-6 {
-  padding: 0px;
-  object-fit: cover;
-}
+
 @media (min-width: 768px) and (max-width: 1204px) {
   .footer {
     padding: 0;
