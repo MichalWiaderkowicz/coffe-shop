@@ -2,7 +2,7 @@ import { classNames, select, settings } from './settings.js';
 import Product from './components/Product.js';
 
 const app = {
-  init: function() {
+  init: function () {
     const thisApp = this;
     //console.log(this);
 
@@ -10,7 +10,7 @@ const app = {
     thisApp.initData();
   },
 
-  initData: function() {
+  initData: function () {
     const thisApp = this;
 
     const url = settings.db.url + '/' + settings.db.products;
@@ -27,26 +27,31 @@ const app = {
       });
   },
 
-  initcoffe: function() {
+  initcoffe: function () {
     const thisApp = this;
 
-    for(let productData in thisApp.data.products){
-      new Product(thisApp.data.products[productData].id, thisApp.data.products[productData]);
+    for (let productData in thisApp.data.products) {
+      new Product(
+        thisApp.data.products[productData].id,
+        thisApp.data.products[productData]
+      );
     }
   },
 
-  initPages: function(){
+  initPages: function () {
     const thisApp = this;
     /* find the container with the subpage code */
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     /* find all sitelinks */
-    thisApp.navigationLinks = document.querySelectorAll(select.navigation.links);
+    thisApp.navigationLinks = document.querySelectorAll(
+      select.navigation.links
+    );
     /* use the id from the hash to determine the opening of the default page */
     const hashId = window.location.hash.replace('#/', '');
     /* check if the id matches the subpage name */
     let pageHash = thisApp.pages[0].id;
-    for(let page of thisApp.pages) {
-      if(page.id == hashId) {
+    for (let page of thisApp.pages) {
+      if (page.id == hashId) {
         pageHash = page.id;
         break;
       }
@@ -55,8 +60,8 @@ const app = {
     thisApp.activatePage(pageHash);
 
     /* add listeners for sitelinks */
-    for(let link of thisApp.navigationLinks) {
-      link.addEventListener('click', function(event){
+    for (let link of thisApp.navigationLinks) {
+      link.addEventListener('click', function (event) {
         const clickedElement = this;
         event.preventDefault();
 
@@ -71,20 +76,22 @@ const app = {
     }
   },
 
-  activatePage: function(pageId) {
+  activatePage: function (pageId) {
     const thisApp = this;
-    
+    console.log('----------------------');
     /* assign the active class to the selected subpage, remove it from the others */
-    for(let page of thisApp.pages) {
+    for (let page of thisApp.pages) {
+      console.log(thisApp.pages, page.id, pageId);
       page.classList.toggle(classNames.pages.active, page.id == pageId);
     }
     /* assign the active class to the selected link, remove it from the others */
-    for(let link of thisApp.navigationLinks) {
-      link.classList.toggle(classNames.navigation.active, link.getAttribute('href') == '#' + pageId);
-
+    for (let link of thisApp.navigationLinks) {
+      link.classList.toggle(
+        classNames.navigation.active,
+        link.getAttribute('href') == '#' + pageId
+      );
     }
   },
-
 };
 
 app.init();

@@ -1,35 +1,8 @@
-/* what classes for “layout” (_layout.scss) may be useful to us.
-The .container class will probably come in handy */
-.container {
-  max-width: 1164px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* maybe it would be a good idea to prepare a .page class for the "subpage" style?
-It could be, for example, a class giving some small padding at the top and bottom of the element. */
-.page {
-  padding: 10px 0;
-}
-
-
-@media (min-width: 768px) and (max-width: 1204px) {
-  .footer {
-    padding: 0;
-  }
-}
-
-@media (max-width:767px){
-  .container {
-    max-width: auto;
-  }
-
-  .footer {
-    scale: 0.7;
-    padding: 0;
-
-    p{
-      margin : 0 auto;
-    }
-  }
+footer {
+  font-family: $font-semibold;
+  font-size: 14px;
+  padding: 14px 0;
+  line-height: 24px;
+  text-align: center;
+  color: $color-gray;
 }
